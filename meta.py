@@ -10,6 +10,6 @@ COMMANDS = [
 
 
 for cmd in COMMANDS:
-    print '$', cmd
+    print('$', cmd)
     sys.stdout.flush()
     subprocess.check_call(cmd, shell=True)

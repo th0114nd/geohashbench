@@ -3,7 +3,7 @@ import yaml
 
 
 def read_packages(f):
-    pkgs = yaml.load(f)['packages']
+    pkgs = yaml.full_load(f)['packages']
     for pkg in pkgs:
         enrich_package(pkg)
     return pkgs
@@ -45,14 +45,14 @@ INPUT_TYPES = {
 
 
 def output_benchmarks(pkgs):
-    print 'package geohashbench'
-    print
+    print('package geohashbench')
+    print()
 
-    print 'import ('
-    print '\t"testing"'
+    print('import (')
+    print('\t"testing"')
     for pkg in pkgs:
-        print '\t{alias} "{import}"'.format(**pkg)
-    print ')'
+        print('\t{alias} "{import}"'.format(**pkg))
+    print(')')
 
     for pkg in pkgs:
         for name, tmpl in pkg.get('benchmarks', {}).items():
@@ -63,7 +63,7 @@ def output_benchmarks(pkgs):
             params.update(input_type)
             params['name'] = name
             params['func'] = tmpl.format(**params)
-            print benchmark_template.format(**params)
+            print(benchmark_template.format(**params))
 
 
 def main(args):

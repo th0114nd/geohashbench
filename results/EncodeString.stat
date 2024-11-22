@@ -1,9 +1,9 @@
-name                        time/op
-MmcloughlinEncodeString-4   44.3ns ± 0%
-PierrreEncodeString-4        460ns ± 0%
-CodeforEncodeString-4        468ns ± 0%
-GansiduiEncodeString-4       522ns ± 0%
-TomihiltunenEncodeString-4   545ns ± 0%
-FanixkEncodeString-4         547ns ± 0%
-TidwallEncodeString-4        602ns ± 0%
-BroadyEncodeString-4        1.06µs ± 0%
+                           │ results/EncodeString.out │
+                           │          sec/op          │
+MmcloughlinEncodeString-10               25.95n ± ∞ ¹
+PierrreEncodeString-10                   397.4n ± ∞ ¹
+FanixkEncodeString-10                    405.1n ± ∞ ¹
+GansiduiEncodeString-10                  417.9n ± ∞ ¹
+BroadyEncodeString-10                    750.2n ± ∞ ¹
+geomean                                  265.1n
+¹ need >= 6 samples for confidence interval at level 0.95

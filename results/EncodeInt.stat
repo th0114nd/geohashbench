@@ -1,5 +1,8 @@
-name                    time/op
-MmcloughlinEncodeInt-4  3.74ns ± 0%
-BsmEncodeInt-4          15.0ns ± 0%
-EzzkoramEncodeInt-4     34.1ns ± 0%
-CorscEncodeInt52-4       363ns ± 0%
+                        │ results/EncodeInt.out │
+                        │        sec/op         │
+BsmEncodeInt-10                    4.262n ± ∞ ¹
+MmcloughlinEncodeInt-10            4.942n ± ∞ ¹
+EzzkoramEncodeInt-10               5.250n ± ∞ ¹
+CorscEncodeInt52-10                296.2n ± ∞ ¹
+geomean                            13.45n
+¹ need >= 6 samples for confidence interval at level 0.95
