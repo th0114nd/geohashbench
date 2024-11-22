@@ -4,6 +4,10 @@ packages:
       EncodeString: Encode({lat}, {lng})
       EncodeInt: EncodeInt({lat}, {lng})
       DecodeString: Decode({geohash})
+  - import: github.com/TomiHiltunen/geohash-golang
+    benchmarks:
+      EncodeString: Encode({lat}, {lng})
+      DecodeString: Decode({geohash})
   - import: github.com/gansidui/geohash
     benchmarks:
       EncodeString: Encode({lat}, {lng}, 12)
@@ -24,6 +28,10 @@ packages:
   - import: github.com/ezzkoram/geohash
     benchmarks:
       EncodeInt: FromCoordinates({lat}, {lng}).Hash()
+  - import: github.com/Codefor/geohash
+    benchmarks:
+      EncodeString: Encode({lat}, {lng})
+      DecodeString: Decode({geohash})
   - import: github.com/fanixk/geohash
     benchmarks:
       EncodeString: Encode({lat}, {lng})

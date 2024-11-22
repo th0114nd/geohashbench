@@ -3,6 +3,8 @@ package geohashbench
 import (
 	"testing"
 
+	codefor "github.com/Codefor/geohash"
+	tomihiltunen "github.com/TomiHiltunen/geohash-golang"
 	broady "github.com/broady/gogeohash"
 	bsm "github.com/bsm/geohashi"
 	corsc "github.com/corsc/go-geohash"
@@ -34,6 +36,22 @@ func BenchmarkMmcloughlinDecodeString(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		mmcloughlin.Decode(geohashes[i%1024])
+	}
+}
+
+func BenchmarkTomihiltunenEncodeString(b *testing.B) {
+	points := RandomPoints(1024)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		tomihiltunen.Encode(points[i%1024][0], points[i%1024][1])
+	}
+}
+
+func BenchmarkTomihiltunenDecodeString(b *testing.B) {
+	geohashes := RandomStringGeohashes(1024)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		tomihiltunen.Decode(geohashes[i%1024])
 	}
 }
 
@@ -98,6 +116,22 @@ func BenchmarkEzzkoramEncodeInt(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		ezzkoram.FromCoordinates(points[i%1024][0], points[i%1024][1]).Hash()
+	}
+}
+
+func BenchmarkCodeforEncodeString(b *testing.B) {
+	points := RandomPoints(1024)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		codefor.Encode(points[i%1024][0], points[i%1024][1])
+	}
+}
+
+func BenchmarkCodeforDecodeString(b *testing.B) {
+	geohashes := RandomStringGeohashes(1024)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		codefor.Decode(geohashes[i%1024])
 	}
 }
 

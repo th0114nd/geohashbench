@@ -3,6 +3,8 @@ module github.com/mmcloughlin/geohashbench
 go 1.23.3
 
 require (
+	github.com/Codefor/geohash v0.0.0-20140723084247-1b41c28e3a9d // indirect
+	github.com/TomiHiltunen/geohash-golang v0.0.0-20150112065804-b3e4e625abfb // indirect
 	github.com/aclements/go-moremath v0.0.0-20210112150236-f10218a38794 // indirect
 	github.com/broady/gogeohash v0.0.0-20120525094510-7b2c40d64042 // indirect
 	github.com/bsm/geohashi v2.0.0+incompatible // indirect
