@@ -1,10 +1,10 @@
                             │ results/DecodeString.out │
                             │          sec/op          │
-MmcloughlinDecodeString-10                40.25n ± ∞ ¹
-PierrreDecodeString-10                    229.1n ± ∞ ¹
-CodeforDecodeString-10                    358.5n ± ∞ ¹
-BroadyDecodeString-10                     376.3n ± ∞ ¹
-TomihiltunenDecodeString-10               441.6n ± ∞ ¹
-FanixkDecodeString-10                     480.4n ± ∞ ¹
-geomean                                   253.3n
+MmcloughlinDecodeString-10                39.76n ± ∞ ¹
+PierrreDecodeString-10                    231.5n ± ∞ ¹
+CodeforDecodeString-10                    358.0n ± ∞ ¹
+BroadyDecodeString-10                     375.8n ± ∞ ¹
+TomihiltunenDecodeString-10               437.2n ± ∞ ¹
+FanixkDecodeString-10                     483.4n ± ∞ ¹
+geomean                                   252.9n
 ¹ need >= 6 samples for confidence interval at level 0.95
